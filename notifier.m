@@ -1,9 +1,14 @@
 function notifier(msg)
-% send notification to OSX notification center
+% NOTIFIER send notification to OSX notification center
 % 
 % Args:
 %   - msg: str, message body
-% 
-% Dependencies: terminal-notifier
-cmd = ['terminal-notifier -message ', msg, ' -activate com.mathworks.matlab'];
+
+% Depend on `terminal-notifier`
+cmd = ['/usr/local/bin/terminal-notifier ', ...
+    ' -message ', msg, ...
+    ' -sender com.mathworks.matlab ', ...
+    ' -activate com.mathworks.matlab ', ...
+    ];
+disp(cmd);
 system(cmd);
