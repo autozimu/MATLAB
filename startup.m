@@ -7,4 +7,9 @@ set(0,'defaulttextinterpreter','latex');
 set(0, 'defaulttextfontname', 'Times');
 
 %% load export_fig
-addpath ~/Documents/MATLAB/export_fig
+if ismac()
+    addpath ~/Documents/MATLAB/export_fig
+end
+if ispc()
+    addpath C:\Users\Junfeng\Documents\MATLAB\export_fig
+end
