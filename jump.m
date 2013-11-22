@@ -14,7 +14,7 @@ end
 if status == 0
     if ~isunix()
         % translate cygwin path to windows
-        [~, dst] = system(['C:\cygwin65\bin\cgypath.exe --windows ', dst]);
+        [~, dst] = system(['C:\cygwin64\bin\cygpath.exe --windows ', dst]);
     end
     cd(dst(1:end-1))
 else
