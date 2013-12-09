@@ -8,8 +8,8 @@ set(0, 'defaulttextfontname', 'Times');
 
 %% load export_fig
 if ismac()
-    addpath ~/Documents/MATLAB/export_fig
+    addpath [getenv('HOME') '/Documents/MATLAB/export_fig']
 end
 if ispc()
-    addpath C:\Users\Junfeng\Documents\MATLAB\export_fig
+    addpath [getenv('USERPROFILE') '\Documents\MATLAB\export_fig']
 end
